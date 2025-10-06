@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Student</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container form-box">
+    <h2>✏️ Edit Student</h2>
+    <form action="/edit/<%= student._id %>?_method=PUT" method="POST">
+      <input type="text" name="name" value="<%= student.name %>" required>
+      <input type="email" name="email" value="<%= student.email %>" required>
+      <input type="text" name="course" value="<%= student.course %>" required>
+      <input type="number" name="fees" value="<%= student.fees %>" required>
+      <button type="submit" class="btn">Update Student</button>
+    </form>
+    <a href="/" class="back-link">⬅ Back</a>
+  </div>
+</body>
+</html>

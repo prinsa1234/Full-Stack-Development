@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - Students</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Tuition Admin Panel</h1>
+    <a href="/add" class="btn">+ Add New Student</a>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Course</th>
+        <th>Fees</th>
+        <th>Actions</th>
+      </tr>
+      <% students.forEach(student => { %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.email %></td>
+          <td><%= student.course %></td>
+          <td>₹<%= student.fees %></td>
+          <td>
+            <a href="/edit/<%= student._id %>" class="btn-small edit">Edit</a>
+            <form action="/delete/<%= student._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button class="btn-small delete">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </table>
+  </div>
+</body>
+</html>
