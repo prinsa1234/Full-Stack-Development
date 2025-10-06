@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Portal</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Library Portal</h1>
+    <% if (user) { %>
+      <p>Hello, <strong><%= user.name %></strong>!</p>
+      <a href="/profile">Go to Profile</a><br>
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <p>You are not logged in.</p>
+      <a href="/login">Login</a>
+    <% } %>
+  </div>
+</body>
+</html>
