@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gym Rep Counter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 60px;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    #count {
+      font-size: 5rem;
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #inc { background-color: #7bb27d; color: white; }
+    #dec { background-color: #e7938d; color: white; }
+    #reset { background-color: #555; color: white; }
+  </style>
+</head>
+<body>
+    <h1>Gym Rep Counter</h1>
+  <div id="count">0</div>
+  <div>
+    <button id="inc">+1</button>
+    <button id="dec">-1</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <script>
+    const countEl = document.getElementById('count');
+
+    async function updateUI() {
+      const res = await fetch('/api/count');
+      const data = await res.json();
+      countEl.textContent = data.count;
+    }
+
+    async function changeCount(action) {
+      const res = await fetch('/api/count', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action }),
+      });
+      const data = await res.json();
+      countEl.textContent = data.count;
+    }
+
+    document.getElementById('inc').onclick = () => changeCount('increment');
+    document.getElementById('dec').onclick = () => changeCount('decrement');
+    document.getElementById('reset').onclick = () => changeCount('reset');
+
+    updateUI();
+  </script>
+</body>
+</html>
