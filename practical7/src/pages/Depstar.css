@@ -1,0 +1,42 @@
+.depstar-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.background-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid #2c3e50;
+}
+
+.section {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-left: 10px solid #2c3e50;
+  border-radius: 4px;
+}
+
+.section h1,
+.section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.section ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
