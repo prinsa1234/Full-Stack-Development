@@ -1,0 +1,88 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #05307c;
+
+}
+
+.app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 255, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #0c3680;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #0c3680;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #0c3680;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #092040;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-card {
+  background-color: #d2e3fc;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+}
+
+.task-card details summary {
+  font-weight: bold;
+  cursor: pointer;
+  color: #0c3680;
+  font-size: 1.1rem;
+}
+
+.task-card p {
+  margin: 10px 0 0;
+  color: #333;
+}
+
+.task-card button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #d93025;
+}
+
+.task-card button:hover {
+  background-color: #a6211b;
+}
