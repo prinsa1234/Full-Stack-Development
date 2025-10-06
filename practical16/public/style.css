@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #222;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  font-size: 14px;
+}
+
+.contact-form button {
+  background: #00eaff;
+  border: none;
+  color: #111;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background: #00c7d9;
+}
+
+.alert {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.alert.success {
+  background: #1b5e20;
+  color: #c8e6c9;
+}
+
+.alert.error {
+  background: #b71c1c;
+  color: #ffcdd2;
+}
