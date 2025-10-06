@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon-Like Fashion Store</title>
+  <style>
+    :root {
+      --golden: #C6AA89;
+      --earth: #B3A794;
+      --deep-gray: #515150;
+      --light-cream: #F4F1EE;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light-cream);
+      color: var(--deep-gray);
+    }
+
+    header {
+      background-color: var(--deep-gray);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--earth);
+      padding: 1rem;
+      display: flex;
+      justify-content: space-around;
+      color: var(--white);
+    }
+
+    .products {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .product {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .product h3 {
+      color: var(--deep-gray);
+    }
+
+    .product p {
+      color: var(--golden);
+      font-weight: bold;
+    }
+
+    .offers {
+      background: var(--golden);
+      padding: 2rem;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .sales-table {
+      width: 80%;
+      margin: 1rem auto;
+      border-collapse: collapse;
+    }
+
+    .sales-table th, .sales-table td {
+      border: 1px solid var(--earth);
+      padding: 10px;
+    }
+
+    .description {
+      padding: 2rem;
+      text-align: center;
+      background: var(--earth);
+      color: var(--white);
+    }
+
+    footer {
+      background-color: var(--deep-gray);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fashion Emporium</h1>
+    <p>Discover elegance in every click</p>
+  </header>
+
+  <nav>
+    <div>Home</div>
+    <div>Categories</div>
+    <div>Deals</div>
+    <div>Contact</div>
+  </nav>
+
+  <section class="products">
+    <div class="product">
+      <h3>Classic Blazer</h3>
+      <p>$79.99</p>
+    </div>
+    <div class="product">
+      <h3>Gold Leaf Earrings</h3>
+      <p>$24.99</p>
+    </div>
+    <div class="product">
+      <h3>Designer Handbag</h3>
+      <p>$139.99</p>
+    </div>
+    <div class="product">
+      <h3>Elegant Heels</h3>
+      <p>$59.99</p>
+    </div>
+  </section>
+
+  <section class="offers">
+    <h2>Upcoming Sales & Offers</h2>
+    <table class="sales-table">
+      <tr>
+        <th>Event</th>
+        <th>Duration</th>
+        <th>Offer</th>
+      </tr>
+      <tr>
+        <td>Golden Week</td>
+        <td>1st Oct - 7th Oct</td>
+        <td>Up to 50% off</td>
+      </tr>
+      <tr>
+        <td>Year-End Clearance</td>
+        <td>25th Dec - 1st Jan</td>
+        <td>Flat 60%</td>
+      </tr>
+    </table>
+  </section>
+
+  <section class="description">
+    <h2>Why Shop With Fashion Emporium?</h2>
+    <p>Shop timeless collections crafted with care. Enjoy exclusive discounts, top-notch customer service, and fast shipping, all with a minimal and luxurious interface.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Fashion Emporium. All rights reserved.
+  </footer>
+</body>
+</html>
