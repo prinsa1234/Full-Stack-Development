@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Uploaded Successfully</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="container success-box">
+    <h2>✅ Resume Uploaded Successfully!</h2>
+    <p>Your file has been uploaded and saved securely.</p>
+
+    <div style="margin: 20px 0;">
+      <strong>File name:</strong>
+      <p><%= filename %></p>
+    </div>
+
+    <a href="/">⬅ Back to Upload Another</a>
+  </div>
+
+  <script>
+    // Small fade-in animation for success box
+    document.addEventListener('DOMContentLoaded', () => {
+      const box = document.querySelector('.success-box');
+      box.style.opacity = 0;
+      box.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        box.style.transition = 'all 0.6s ease';
+        box.style.opacity = 1;
+        box.style.transform = 'translateY(0)';
+      }, 50);
+    });
+  </script>
+</body>
+</html>
