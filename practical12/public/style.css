@@ -1,0 +1,125 @@
+/* Rainbow Animated Background */
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Animated Gradient Background */
+  background: linear-gradient(270deg, #ff4b5c, #ffde59, #4bffa5, #4ba6ff, #d34bff);
+  background-size: 1000% 1000%;
+  animation: gradientShift 12s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Calculator Container with Glow */
+.calculator-container {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  animation: glow 5s infinite alternate;
+}
+
+/* Glow animation with rainbow colors */
+@keyframes glow {
+  0%   { box-shadow: 0 0 25px #ff4b5c; }
+  25%  { box-shadow: 0 0 25px #ffde59; }
+  50%  { box-shadow: 0 0 25px #4bffa5; }
+  75%  { box-shadow: 0 0 25px #4ba6ff; }
+  100% { box-shadow: 0 0 25px #d34bff; }
+}
+
+/* Title */
+.calculator-container h1 {
+  margin-bottom: 20px;
+  color: #ff4b5c;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Inputs */
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  border-radius: 10px;
+  border: 2px solid #ff4b5c;
+  font-size: 18px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border: 2px solid #4ba6ff;
+}
+
+/* Buttons with rainbow hover */
+.buttons button {
+  background: linear-gradient(45deg, #ff4b5c, #ffde59, #4bffa5, #4ba6ff, #d34bff);
+  background-size: 400% 400%;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.buttons button:hover {
+  animation: rainbowBtn 2s linear infinite;
+  transform: scale(1.05);
+}
+
+/* Button rainbow animation */
+@keyframes rainbowBtn {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 100px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+  background: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 20px;
+  width: 300px;
+  text-align: center;
+  animation: popIn 0.3s ease-in-out;
+}
+
+.popup-content h2 {
+  color: #ff4b5c;
+}
+
+.close {
+  color: #ff4b5c;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>🧮 Kids Calculator</h1>
+    <form id="calcForm">
+      <input type="text" id="num1" placeholder="Enter first number" required>
+      <input type="text" id="num2" placeholder="Enter second number" required>
+
+      <div class="buttons">
+        <button type="button" onclick="calculate('add')">➕ Add</button>
+        <button type="button" onclick="calculate('subtract')">➖ Subtract</button>
+        <button type="button" onclick="calculate('multiply')">✖ Multiply</button>
+        <button type="button" onclick="calculate('divide')">➗ Divide</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2 id="popupMessage"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
